@@ -314,4 +314,5 @@ li a:hover,.facebook:hover{
 
 .social{
     display: flex;
+    cursor: pointer;
 }
