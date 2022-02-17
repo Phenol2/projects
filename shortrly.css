@@ -17,6 +17,7 @@ header{
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 100px;
     background-color: #fff;
 }
@@ -43,10 +44,12 @@ a.active{
 .logo{
     font-weight: bolder;
     margin-inline-end: 20px;
+    font-size: 20px;
 }
 
 .first{
     display: flex;
+    align-items: center;
 }
 
 .second{
