@@ -10,6 +10,7 @@
 body{
     width: 100vw;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 header{
@@ -160,7 +161,7 @@ input{
 
 .statistic{
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .heading{
@@ -198,7 +199,7 @@ input{
     position: absolute;
     width: 60vw;
     height: 6px;
-    background-color: rgb(78, 138, 113);
+    background-color: #50eade;
     bottom: 50%;
     z-index: 3;
 }
@@ -207,6 +208,7 @@ input{
     background-color: #fff;
     padding: 35px 40px 20px 40px;
     margin-inline-end: 60px;
+    border-radius: 3px;
 }
 
 .box-one p{
@@ -224,9 +226,37 @@ input{
 }
 
 .two{
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .three{
-    margin-top: 90px;
+    margin-top: 130px;
+}
+
+.third-part{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 9, 56);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px;
+
+}
+
+.part a{
+    color: #fff;
+    background-color: #50eade;
+    padding: 6px 20px;
+    border-radius: 3rem;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.part .boost{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
