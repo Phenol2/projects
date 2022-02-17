@@ -16,7 +16,7 @@ header{
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
+    padding: 20px 100px;
     background-color: #fff;
 }
 
@@ -65,15 +65,16 @@ a.active{
 }
 
 section.first-part{
-    padding: 60px;
+    padding: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     height: 90vh;
 }
 
 .front{
-    font-size: 60px;
+    font-size: 50px;
     padding-block: 5px;
     font-weight: bolder;
 }
@@ -150,7 +151,7 @@ input{
 
 .middle{
     width: 100vw;
-    padding: 60px;
+    padding: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,7 +180,16 @@ input{
 
 .boxes{
     width: 100vw;
-    padding: 60px;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-one{
+    background-color: #fff;
+    padding: 30px 25px 20px 25px;
+    margin-inline-end: 80px;
 }
 
 .box-one p{
