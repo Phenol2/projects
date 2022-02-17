@@ -60,6 +60,7 @@ a.active{
     margin-inline-start: 20px;
     background-color: #50eade;
     color: rgb(220, 250, 243);
+    opacity: 0.7;
     border-radius: 3rem;
     padding: 5px 10px;
     cursor: pointer;
