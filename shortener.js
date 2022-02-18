@@ -21,9 +21,16 @@ async function shortenUrl(myurl){
 
 //document.addEventListener("DOMContentLoaded",)
 
+
+//display both old links and new links
+
 function displayLinks(oldUrl, newUrl){
     let main = document.querySelector(".shorten-link");
-    let link = document.querySelector(".mylinks");
+    //let link = document.querySelector(".mylinks");
+
+    let link = document.createElement("div");
+    link.classList.add("mylinks");
+
 
     let links = `
     <div class="old-links">
@@ -38,7 +45,7 @@ function displayLinks(oldUrl, newUrl){
 
     link.innerHTML = links
 
-    main.appendChild(link)
+    main.append(link)
 }
 
 
