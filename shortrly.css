@@ -74,7 +74,6 @@ section.first-part{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     height: 90vh;
 }
 
@@ -148,7 +147,9 @@ input{
 }
 
 .second-part{
+    position: relative;
     background-color: rgb(235, 233, 233);
+    margin-top: 50px;
 }
 
 .middle{
@@ -162,7 +163,7 @@ input{
 
 .statistic{
     text-align: center;
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 .heading{
@@ -319,14 +320,16 @@ li a:hover,.facebook:hover{
 }
 
 .shorten-link{
-    /*position: absolute;*/
-    /*bottom: -12%;*/
+    position: absolute;
+    bottom: -32%;
+    right: 0%;
     width: 100vw;
-    height: 20vh;
     color: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-block-end: 10px;
+    z-index: 10;
 }
 
 .mylinks{
@@ -334,7 +337,7 @@ li a:hover,.facebook:hover{
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    margin-block: 30px;
+    margin-block-start: 10px;
     padding: 20px;
     background-color: #fff;
     color: #000;

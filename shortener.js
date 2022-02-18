@@ -45,7 +45,7 @@ function displayLinks(oldUrl, newUrl){
 
     link.innerHTML = links
 
-    main.append(link)
+    main.appendChild(link)
 }
 
 
