@@ -319,8 +319,8 @@ li a:hover,.facebook:hover{
 }
 
 .shorten-link{
-    position: absolute;
-    bottom: -12%;
+    /*position: absolute;*/
+    /*bottom: -12%;*/
     width: 100vw;
     height: 20vh;
     color: #fff;
