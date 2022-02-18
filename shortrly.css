@@ -133,9 +133,6 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: -8%;
-    z-index: 1;
 }
 
 .shorten{
@@ -165,7 +162,7 @@ input{
 
 .statistic{
     text-align: center;
-    margin-top: 60px;
+    margin-top: 90px;
 }
 
 .heading{
@@ -319,4 +316,47 @@ li a:hover,.facebook:hover{
 .social{
     display: flex;
     cursor: pointer;
+}
+
+.shorten-link{
+    position: absolute;
+    bottom: -12%;
+    width: 100vw;
+    height: 20vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mylinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-block: 30px;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.new-links{
+    display: flex;
+    align-items: center;
+}
+
+.new-links .shrt{
+    color: #50eade;
+    margin-inline-end: 10px;
+}
+
+.copy{
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #50eade;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
