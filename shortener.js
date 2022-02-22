@@ -25,7 +25,7 @@ async function shortenUrl(myurl){
 //display both old links and new links
 
 function displayLinks(oldUrl, newUrl){
-    let main = document.querySelector(".shorten-link");
+    let main = document.querySelector(".outputs");
     //let link = document.querySelector(".mylinks");
 
     let link = document.createElement("div");
