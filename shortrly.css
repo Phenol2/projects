@@ -93,6 +93,10 @@ section.first-part{
     margin-block-end: 30px;
 }
 
+.title span{
+    display: block;
+}
+
 .started{
     color: rgb(220, 250, 243);
     background-color: #50eade;
@@ -188,6 +192,7 @@ input{
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -223,6 +228,10 @@ input{
     color: #000;
     opacity: 0.7;
     line-height: 25px;
+}
+
+.copy{
+    cursor: pointer;
 }
 
 .box-one h3{
@@ -324,7 +333,7 @@ li a:hover,.facebook:hover{
 
 .shorten-link{
     position: absolute;
-    bottom: -32%;
+    bottom: -18%;
     right: 0%;
     width: 100vw;
     color: #fff;
@@ -372,5 +381,207 @@ li a:hover,.facebook:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 50px;
+}
+
+@media (max-width: 677px){
+    header{
+        padding: 10px;
+    }
+
+    .front{
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    .started{
+        font-size: 26px;
+        font-weight: bolder;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+    }
+
+    section.first-part{
+        width: 100vw;
+        height: 110vh;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .more{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .title{
+        font-size: 13px;
+    }
+
+    .title span{
+        display: inline-block;
+    }
+
+    .image{
+        width: 100vw;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+
+    .image img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .second-part{
+        padding: 0px;
+    }
+
+    .box{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lines{
+        position: absolute;
+        top: 20%;
+        left: 45%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 700px;
+        z-index: 1;
+    }
+
+    .boxes{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    .box-one{
+        width: 90%;
+        text-align: center;
+        padding: 25px 20px;
+        border-radius: 8px;
+    }
+
+    .box-one h3{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .box-one p{
+        font-size: 16px;
+        line-height: 28px;
+        opacity: 0.5;
+    }
+
+    .heading{
+        font-size: 35px;
+    }
+
+    .words{
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .words span {
+        display: block;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input{
+        width: 90%;
+        padding: 20px 15px;
+        margin-bottom: 10px;
+    }
+
+    .shorten-link{
+        bottom: -24%;
+    }
+
+    .shorten{
+        width: 90%;
+        padding: 20px 15px;
+        font-weight: bolder;
+        font-size: 18px;
+        align-self: center;
+        margin-inline-start: 0px;
+    }
+
+    .third-part{
+        padding: 70px;
+    }
+
+    .part a{
+        font-size: 22px;
+        padding: 10px 22px;
+    }
+
+    .boost{
+        font-size: 35px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .short{
+        margin: 30px 0px 50px 0px;
+    }
+
+    .features{
+        margin-bottom: 20px;
+    }
+
+    .outputs{
+        margin-top: 100px;
+    }
+
+    .mylinks{
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    .old-links{
+        align-self: start;
+        margin-bottom: 5px;
+    }
+
+    .new-links{
+        align-self: end;
+    }
+
+    .copy{
+        cursor: pointer;
+    }
 }
