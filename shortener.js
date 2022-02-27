@@ -2,14 +2,20 @@ let URL = "https://api.shrtco.de/v2/shorten?url=";
 
 let shorten = document.querySelector('.shorten');
 
+
+
+let arr = [];
+
 //get the new url from the api
 async function shortenUrl(myurl){
     try{
         let { data } = await new axios(`${URL}${myurl}`);
 
-        displayLinks(myurl, data.result.full_short_link);
+        let newLinks =  data.result.full_short_link;
 
-        console.log(data.result.full_short_link);
+        //displayLinks(myurl, newLinks);
+        checkForDuplcateUrl(myurl, newLinks)
+        //console.log(newLinks);
     }
     catch(err){
         if(!(err.okay)){
@@ -19,7 +25,26 @@ async function shortenUrl(myurl){
     
 }
 
-//document.addEventListener("DOMContentLoaded",)
+
+// function to check for dupliacate links or Urls...
+function checkForDuplcateUrl(_oldUrl, _newUrl){
+
+    //new Set helps to filter the list in other to remove duplicate...
+    let filteredList = new Set(arr);
+
+    //the list is being updated i.e new links are been added to array...
+    arr.push(_newUrl);
+    if(filteredList.has(_newUrl)){
+        
+        console.log("duplicate eixst")
+    }else{
+        displayLinks(_oldUrl, _newUrl)
+    }
+    //console.log(duplicate)
+    //console.log(arr)
+}
+
+
 
 
 //display both old links and new links
@@ -48,6 +73,11 @@ function displayLinks(oldUrl, newUrl){
     main.appendChild(link)
 }
 
+let enter = document.querySelector('.enter')
+
+//display error message when there is empty input field...
+let error = document.createElement('div')
+
 
 // get values from the input...
 shorten.addEventListener("click",(e) => {
@@ -62,10 +92,22 @@ shorten.addEventListener("click",(e) => {
     if(linksInput){
 
         shortenUrl(linksInput)
+        parentName.style.border = 'none';
+        error.innerHTML = ''
+     
     }else{
+       
+        error.classList.add('error')
+        error.innerText = 'please enter a url'
+        enter.appendChild(error)
+        parentName.style.border = '1px solid red'
+        
         console.log("please enter a url")
     }
-    
+
+    parentName.value = "";
      //shortenUrl("https://www.frontendmentor.io/challenges")
     console.log(linksInput)
 })
+
+
