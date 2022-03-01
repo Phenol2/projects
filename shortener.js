@@ -82,6 +82,9 @@ function displayLinks(oldUrl, newUrl){
             let copyParent = e.target.parentElement.firstElementChild;
             let textArea = document.createElement('textarea');
             const copiedLink = copyParent.innerHTML;
+            e.target.style.backgroundColor = "rgb(39, 9, 56)";
+           e.target.style.color = "white"
+           e.target.innerHTML = "copied"
 
            if(copiedLink){
 
@@ -92,6 +95,7 @@ function displayLinks(oldUrl, newUrl){
             textArea.setSelectionRange(0, 9999);
         
            document.execCommand("copy");
+           
     
            textArea.remove();
             }
