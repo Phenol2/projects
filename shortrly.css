@@ -403,10 +403,20 @@ li a:hover,.facebook:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
-@media (max-width: 677px){
+
+.bars{
+    display: none;
+}
+
+.nav{
+    display: none;
+}
+
+
+/*@media (max-width: 677px), (min-width: 500px){
     header{
         padding: 10px;
     }
@@ -606,31 +616,46 @@ li a:hover,.facebook:hover{
     .copy{
         cursor: pointer;
     }
-}
+
+    .bars{
+        display: none;
+    }
+}*/
 
 @media (max-width: 480px){
     header{
-        padding: 5px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
+
     .front{
+        display: block;
         font-size: 20px;
         font-weight: bold;
+        width: 100vw;
+    }
+
+    .second-part{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .started{
-        font-size: 26px;
+        font-size: 18px;
         font-weight: bolder;
-        padding: 10px 25px;
+        padding: 5px 8px;
         margin-bottom: 30px;
     }
 
     section.first-part{
         width: 100vw;
-        height: 110vh;
+        height: 60vh;
         flex-direction: column-reverse;
-        align-items: center;
-        justify-content: space-between;
     }
 
     .more{
@@ -646,16 +671,17 @@ li a:hover,.facebook:hover{
         font-size: 10px;
     }
     .title{
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .title span{
         display: inline-block;
+        
     }
 
     .image{
         width: 100vw;
-        height: 100px;
+        height: 140px;
         object-fit: cover;
         margin-top: 20px;
     }
@@ -665,12 +691,8 @@ li a:hover,.facebook:hover{
         height: 100%;
     }
 
-    .second-part{
-        padding: 0px;
-    }
-
     .box{
-        width: 100vw;
+        width: 80vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -683,7 +705,7 @@ li a:hover,.facebook:hover{
         left: 45%;
         transform: translateX(-50%);
         width: 6px;
-        height: 700px;
+        height: 500px;
         z-index: 1;
     }
 
@@ -694,33 +716,36 @@ li a:hover,.facebook:hover{
         align-items: center;
         justify-content: space-between;
         width: 100vw;
+        padding: 0px;
+        margin-bottom: 30px;
     }
 
     .box-one{
-        width: 90%;
+        padding: 15px 10px;
         text-align: center;
-        padding: 25px 20px;
         border-radius: 8px;
+        margin: auto;
     }
 
     .box-one h3{
-        font-size: 25px;
+        font-size: 18px;
         font-weight: bolder;
     }
 
     .box-one p{
-        font-size: 16px;
+        font-size: 13px;
         line-height: 28px;
         opacity: 0.5;
     }
 
     .heading{
-        font-size: 35px;
+        font-size: 20px;
     }
 
     .words{
-        font-size: 15px;
+        font-size: 12px;
         line-height: 30px;
+        font-weight: bold;
     }
 
     .words span {
@@ -736,7 +761,7 @@ li a:hover,.facebook:hover{
 
     input{
         width: 90%;
-        padding: 20px 15px;
+        padding: 10px 12px;
         margin-bottom: 10px;
     }
 
@@ -746,9 +771,9 @@ li a:hover,.facebook:hover{
 
     .shorten{
         width: 90%;
-        padding: 20px 15px;
+        padding: 10px 12px;
         font-weight: bolder;
-        font-size: 18px;
+        font-size: 14px;
         align-self: center;
         margin-inline-start: 0px;
     }
@@ -790,13 +815,14 @@ li a:hover,.facebook:hover{
     }
 
     .outputs{
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     .mylinks{
         display: flex;
         flex-direction: column;
         border-radius: 5px;
+        font-size: 12px;
     }
 
     .old-links{
@@ -810,5 +836,62 @@ li a:hover,.facebook:hover{
 
     .copy{
         cursor: pointer;
+    }
+
+    .two{
+        margin-top: 25px;
+    }
+
+    .three{
+        margin-top: 25px;
+    }
+
+    .features ul li a{
+        font-size: 14px;
+    }
+
+    .second, .nav-bar{
+        display: none;
+    }
+
+    .bar{
+        background-color: #000;
+        width: 18px;
+        height: 4px;
+        margin-bottom: 3px;
+    }
+
+    .bars{
+        display: inline-block;
+        padding: 2px;
+        z-index: 1000;
+    }
+
+    .nav a{
+        display: block;
+        padding: 1rem;
+        color: #000;
+        margin-block: 5px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 14px;
+        background-color: #e8e9e9;
+        width: 100vw;
+    }
+
+    .nav{
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        transition: all 1s ease-out;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: #fff;
+        z-index: 1000;
+        padding-block-end: 20px;
+    }
+
+    .nav.open{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }

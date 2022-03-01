@@ -70,7 +70,34 @@ function displayLinks(oldUrl, newUrl){
 
     link.innerHTML = links
 
-    main.appendChild(link)
+    main.appendChild(link);
+
+    // to copy link to clip board...
+    let copies = document.querySelectorAll('.copy');
+
+    copies.forEach(copy => {
+        copy.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            let copyParent = e.target.parentElement.firstElementChild;
+            let textArea = document.createElement('textarea');
+            const copiedLink = copyParent.innerHTML;
+
+           if(copiedLink){
+
+            textArea.value = copiedLink;
+            document.body.appendChild(textArea);
+    
+            textArea.select();
+            textArea.setSelectionRange(0, 9999);
+        
+           document.execCommand("copy");
+    
+           textArea.remove();
+            }
+        })
+    })
+    
 }
 
 let enter = document.querySelector('.enter')
@@ -111,3 +138,11 @@ shorten.addEventListener("click",(e) => {
 })
 
 
+//opening the navigation bar...
+
+let toggle = document.querySelector('.bars');
+let nav = document.querySelector('.nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('open')
+})
